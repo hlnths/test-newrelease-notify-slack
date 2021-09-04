@@ -1,0 +1,18 @@
+apiVersion: v1
+data:
+  resource_config.yaml: |
+    recommendations: true
+    resources:
+    - events:
+      - delete
+      - error
+      name: v1/pods
+      namespaces:
+        ignore:
+        - psql
+        - monitor
+        - kube-system
+        - default
+        include:
+        - qsouq
+        - qsouq-front
